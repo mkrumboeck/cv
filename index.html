@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Lebenslauf</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .cv-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        header {
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        header h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        header p {
+            color: #7f8c8d;
+            font-size: 1.1em;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 1px solid #bdc3c7;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            margin-top: 25px;
+        }
+        .section-content {
+            margin-bottom: 20px;
+        }
+        .item-title {
+            font-weight: bold;
+            color: #3498db;
+            font-size: 1.1em;
+        }
+        .item-meta {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-bottom: 5px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .skills-list {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 0;
+        }
+        .skills-list li {
+            background: #3498db;
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv-container">
+        <!-- Kopfbereich / Kontakt -->
+        <header>
+            <h1>Max Mustermann</h1>
+            <p>Softwareentwickler & Web-Designer</p>
+            <p>Email: max.mustermann@email.at | Telefon: +43 660 1234567 | Wohnort: St. Pölten</p>
+        </header>
+
+        <!-- Berufserfahrung -->
+        <h2>Berufserfahrung</h2>
+        <div class="section-content">
+            <div class="item-title">Frontend Developer</div>
+            <div class="item-meta">TechSolutions GmbH | Wien | 2023 – Heute</div>
+            <ul>
+                <li>Entwicklung und Optimierung von responsiven Webseiten.</li>
+                <li>Zusammenarbeit mit dem Design-Team zur Umsetzung moderner UI/UX-Konzepte.</li>
+            </ul>
+        </div>
+        <div class="section-content">
+            <div class="item-title">Junior Web Developer</div>
+            <div class="item-meta">WebAgency | St. Pölten | 2021 – 2023</div>
+            <ul>
+                <li>Mitarbeit an Kundenprojekten mit HTML, CSS und JavaScript.</li>
+                <li>Fehlerbehebung und Anpassung bestehender Web-Applikationen.</li>
+            </ul>
+        </div>
+
+        <!-- Ausbildung -->
+        <h2>Ausbildung</h2>
+        <div class="section-content">
+            <div class="item-title">Bachelor of Science in Web-Development</div>
+            <div class="item-meta">FH St. Pölten | 2018 – 2021</div>
+            <p>Schwerpunkt: Software Engineering und User Experience.</p>
+        </div>
+
+        <!-- Fähigkeiten -->
+        <h2>Fähigkeiten</h2>
+        <div class="section-content">
+            <ul class="skills-list">
+                <li>HTML5 / CSS3</li>
+                <li>JavaScript</li>
+                <li>React.js</li>
+                <li>Responsive Design</li>
+                <li>Git & GitHub</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
