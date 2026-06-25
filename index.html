@@ -113,7 +113,7 @@
       display: none;
     }
 
-    .print-footer {
+    .print-final-qr {
       display: none;
     }
 
@@ -164,26 +164,20 @@
         display: flex !important;
       }
 
-      .print-footer {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 30;
-        display: flex !important;
-        align-items: flex-end;
-        justify-content: space-between;
-        color: #506070;
-        font-size: 10px;
-      }
-
-      .print-footer-qr {
+      .print-final-qr {
+        clear: both;
         display: flex;
         align-items: center;
+        justify-content: flex-start;
         gap: 8px;
+        margin-top: 16mm;
+        color: #506070;
+        font-size: 10px;
+        break-inside: avoid;
+        page-break-inside: avoid;
       }
 
-      .print-footer-qr img {
+      .print-final-qr img {
         height: 52px;
         width: 52px;
       }
@@ -1017,10 +1011,8 @@
         </div>
       </div>
     </article>
-  </main>
 
-  <!-- <footer class="print-footer" aria-hidden="true">
-    <div class="print-footer-qr">
+    <div class="print-final-qr" aria-hidden="true">
       <img
         src="https://api.qrserver.com/v1/create-qr-code/?size=104x104&margin=6&data=https%3A%2F%2Fmkrumboeck.github.io%2Fcv%2F"
         alt="">
@@ -1029,7 +1021,7 @@
         <p>mkrumboeck.github.io/cv/</p>
       </div>
     </div>
-  </footer> -->
+  </main>
 </body>
 
 </html>
