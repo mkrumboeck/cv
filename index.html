@@ -221,26 +221,19 @@
       }
 
       .print-grid {
-        display: block !important;
+        display: grid !important;
+        grid-template-columns: 0.9fr 1.35fr !important;
+        align-items: start !important;
         padding-top: 10px !important;
         gap: 12px !important;
       }
 
-      .print-grid::after {
-        display: block;
-        clear: both;
-        content: "";
-      }
-
-      .print-grid>aside {
-        float: left;
-        width: 39% !important;
-        margin-right: 14px !important;
-      }
-
+      .print-grid>aside,
       .print-grid>div {
+        display: block !important;
+        float: none !important;
         width: auto !important;
-        margin-left: calc(39% + 14px) !important;
+        margin: 0 !important;
       }
 
       .space-y-8> :not([hidden])~ :not([hidden]) {
@@ -375,9 +368,9 @@
               Kreativ denken, leidenschaftlich handeln.
             </p>
             <p class="mt-4 max-w-2xl text-base leading-7 text-steel">
-              Ich entwickle moderne Softwarelösungen mit Fokus auf Qualität, Wartbarkeit und Benutzerfreundlichkeit. Als
-              Fullstack-Entwickler mit 9 Jahren Berufserfahrung verbinde ich technisches Know-how mit kreativem Denken
-              und pragmatischen Lösungen.</p>
+              Ich entwickle benutzerfreundliche Applikationen, die klar aufgebaut, schnell umgesetzt und langfristig
+              wartbar sind. Als Fullstack-Entwickler mit 9 Jahren Berufserfahrung schreibe ich nachvollziehbaren Code
+              und finde pragmatische Lösungen für komplexe Anforderungen.</p>
           </div>
 
           <dl class="grid gap-3 text-sm text-slate-700 sm:grid-cols-2">
@@ -447,6 +440,11 @@
                     <span class="font-medium text-slate-800">C#</span>
                     <span aria-label="5 von 5 Sternen" class="whitespace-nowrap text-lg"><span
                         class="star-filled">★★★★★</span></span>
+                  </div>
+                  <div class="skill-row flex items-center justify-between gap-4">
+                    <span class="font-medium text-slate-800">Java</span>
+                    <span aria-label="3 von 5 Sternen" class="whitespace-nowrap text-lg"><span
+                        class="star-filled">★★★</span><span class="star-empty">★★</span></span>
                   </div>
                   <div class="skill-row flex items-center justify-between gap-4">
                     <span class="font-medium text-slate-800">TypeScript</span>
@@ -519,7 +517,7 @@
                   <div class="skill-row flex items-center justify-between gap-4">
                     <span class="font-medium text-slate-800">Angular</span>
                     <span aria-label="4 von 5 Sternen" class="whitespace-nowrap text-lg"><span
-                        class="star-filled">★★★★</span><span class="star-empty">★</span></span>
+                        class="star-filled">★★★★★</span></span>
                   </div>
                   <div class="skill-row flex items-center justify-between gap-4">
                     <span class="font-medium text-slate-800">React</span>
@@ -527,9 +525,14 @@
                         class="star-filled">★★★</span><span class="star-empty">★★</span></span>
                   </div>
                   <div class="skill-row flex items-center justify-between gap-4">
+                    <span class="font-medium text-slate-800">Ionic</span>
+                    <span aria-label="3 von 5 Sternen" class="whitespace-nowrap text-lg"><span
+                        class="star-filled">★★★★</span><span class="star-empty">★</span></span>
+                  </div>
+                  <div class="skill-row flex items-center justify-between gap-4">
                     <span class="font-medium text-slate-800">Flutter</span>
                     <span aria-label="3 von 5 Sternen" class="whitespace-nowrap text-lg"><span
-                        class="star-filled">★★★</span><span class="star-empty">★★</span></span>
+                        class="star-filled">★★</span><span class="star-empty">★★★</span></span>
                   </div>
                 </div>
               </div>
@@ -726,6 +729,20 @@
           <section class="print-section order-4">
             <div class="mb-4 flex items-center gap-3">
               <span class="h-2 w-2 rounded-full bg-accent"></span>
+              <h2 class="text-xl font-bold text-ink">Zertifikate</h2>
+            </div>
+            <ul class="list-disc space-y-2 pl-5 text-sm leading-6 text-slate-700">
+              <li>Advanced Angular Development</li>
+              <li>Programming Web Applications with ASP.NET Blazor</li>
+              <li>Splunk 7.x Fundamentals Part 1</li>
+              <li>Programming Data Access Solutions with Entity Framework Core (C#)</li>
+              <li>Zertifizierter Datenschutzbeauftragter (DATB)</li>
+            </ul>
+          </section>
+
+          <section class="print-section order-5">
+            <div class="mb-4 flex items-center gap-3">
+              <span class="h-2 w-2 rounded-full bg-accent"></span>
               <h2 class="text-xl font-bold text-ink">Persönliches</h2>
             </div>
             <div class="space-y-3 text-sm text-slate-700">
@@ -735,7 +752,7 @@
             </div>
           </section>
 
-          <section class="print-section order-5">
+          <section class="print-section order-6">
             <div class="mb-4 flex items-center gap-3">
               <span class="h-2 w-2 rounded-full bg-accent"></span>
               <h2 class="text-xl font-bold text-ink">Fremdsprachen</h2>
@@ -746,7 +763,7 @@
             </div>
           </section>
 
-          <section class="print-section order-6">
+          <section class="print-section order-7">
             <div class="mb-4 flex items-center gap-3">
               <span class="h-2 w-2 rounded-full bg-accent"></span>
               <h2 class="text-xl font-bold text-ink">Hobbys</h2>
@@ -770,7 +787,7 @@
               <article class="border-l-2 border-slate-200 pl-5">
                 <div class="flex flex-wrap items-baseline justify-between gap-2">
                   <h3 class="text-lg font-bold text-ink">Fullstack Entwickler</h3>
-                  <p class="text-sm font-medium text-accent">02/2024 - aktuell</p>
+                  <p class="text-sm font-medium text-accent">02/2024 - 06/2026</p>
 
                 </div>
                 <p class="mt-1 text-sm font-semibold text-slate-700">
@@ -780,8 +797,8 @@
                 </p>
                 <p class="text-sm leading-6 text-steel">Handelskai 94-96, 1120 Wien</p>
                 <ul class="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-steel">
-                  <li>Entwicklung von Polizeilichen Anwendungen (Bundesministerium für Inneres)</li>
-                  <li>Umsetzung eines Beschaffungsystem (Bundesministerium für Inneres)</li>
+                  <li>Polizeiliche Fachanwendungen für das BMI entwickelt</li>
+                  <li>Beschaffungssystem für das BMI realisiert</li>
                 </ul>
 
                 <section class="print-section">
@@ -812,10 +829,10 @@
                 </p>
                 <p class="text-sm leading-6 text-steel">Wagenseilgasse 3, 1120 Wien</p>
                 <ul class="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-steel">
-                  <li>Planung, Design und Umsetzung eines Asset Managmet Systems</li>
-                  <li>Implementierung und Wartung einer Ticket Middelware</li>
-                  <li>Konzeption und Entwicklung des CredsHub-Tools zur Passwortbereitstellung</li>
-                  <li>Einrichtung und Aufbau einer CI/CD-Infrastruktur mit Azure DevOps und Docker</li>
+                  <li>Asset-Management-System geplant und realisiert</li>
+                  <li>Ticket-Middleware erstellt und erweitert</li>
+                  <li>CredsHub-Tool zur Passwortbereitstellung entwickelt</li>
+                  <li>CI/CD mit Azure DevOps und Docker eingeführt</li>
                 </ul>
                 <section class="print-section">
                   <div class="mt-3 flex flex-wrap gap-2">
@@ -848,12 +865,12 @@
                 </p>
                 <p class="text-sm leading-6 text-steel">Porschestraße 7, 3100 St. Pölten</p>
                 <ul class="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-steel">
-                  <li>Entwicklung eines Filialverwaltungstools</li>
-                  <li>Implementierung von Microservices und REST-APIs für den Webshop</li>
-                  <li>Erstellung eines Tools womit SQL Jobs mit Parameter befüllt werden können</li>
-                  <li>Bereitstellung von Reports im Lieferantenportal</li>
-                  <li>Mitwirkung beim Aufbau einer CI/CD-Infrastruktur mit Azure DevOps und Docker</li>
-                  <li>Konzeption und Umsetzung eines Jira-Plugins zur Fuhrparkverwaltung</li>
+                  <li>Tool zur Filialverwaltung gebaut</li>
+                  <li>Microservices und REST-APIs für den Webshop umgesetzt</li>
+                  <li>GUI für parametrisierte SQL-Cube-Auswertungen entwickelt</li>
+                  <li>Analyse von Daten aus dem Lieferantenportal sowie Bereitstellung von Reports</li>
+                  <li>CI/CD mit Azure DevOps und Docker mitgestaltet</li>
+                  <li>Jira-Plugin zur Fuhrparkverwaltung realisiert</li>
                 </ul>
                 <section class="print-section">
                   <div class="mt-3 flex flex-wrap gap-2">
@@ -886,10 +903,11 @@
                 </p>
                 <p class="text-sm leading-6 text-steel">Grazerstraße 49-51, 2700 Wiener Neustadt</p>
                 <ul class="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-steel">
-                  <li>Entwicklung einer Rufnummerweiterleitungsapp</li>
-                  <li>Umsetzung einer Lohnzettel App</li>
-                  <li>Entwerfen eines XML Mitarbeiter Stunden Reports</li>
-                  <li>Quereinstieg lernen von Objektorientiertes Programmieren</li>
+                  <li>App zur Rufnummerweiterleitung entwickelt</li>
+                  <li>Lohnzettel-App programmiert</li>
+                  <li>XML-Report für Mitarbeiterstunden erstellt</li>
+                  <li>Aufgaben als Datenschutzbeauftragter übernommen</li>
+                  <li>Objektorientierte Entwicklung mit Java gelernt</li>
                 </ul>
                 <section class="print-section">
                   <div class="mt-3 flex flex-wrap gap-2">
@@ -919,11 +937,11 @@
                 </p>
                 <p class="text-sm leading-6 text-steel">Guglgasse 15, 1110 Wien</p>
                 <ul class="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-steel">
-                  <li>Auswertung und Erstellung von Reports</li>
-                  <li>Anpassungen und Erweiterungen des Ticketsystem</li>
-                  <li>Einrichtung und Anpassungen von Systemen welche gemonitort werden</li>
-                  <li>End to End Tests erstellen mit Servicetrace</li>
-                  <li>Bauen von Dashboards in Splunk</li>
+                  <li>Auswertung von Daten und Erstellung aussagekräftiger Reports</li>
+                  <li>Ticketsystem erweitert und angepasst</li>
+                  <li>Monitoring-Systeme mit Nagios XI konfiguriert</li>
+                  <li>End-to-End-Tests mit Servicetrace umgesetzt</li>
+                  <li>Dashboards in Splunk erstellt</li>
                 </ul>
                 <section class="print-section">
                   <div class="mt-3 flex flex-wrap gap-2">
@@ -963,11 +981,11 @@
                 </p>
                 <p class="text-sm leading-6 text-steel">Guglgasse 15, 1110 Wien</p>
                 <ul class="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-steel">
-                  <li>Auswertung und Erstellung von Reports</li>
-                  <li>Anpassung und Erweiterung des Ticketsystem</li>
-                  <li>Einrichtung und Anpassungen von Systemen welche gemonitort werden</li>
-                  <li>End to End Tests erstellen mit Servicetrace</li>
-                  <li>Bauen von Dashboards in Splunk</li>
+                  <li>Auswertung von Daten und Erstellung aussagekräftiger Reports</li>
+                  <li>Ticketsystem erweitert und angepasst</li>
+                  <li>Monitoring-Systeme mit Nagios XI konfiguriert</li>
+                  <li>End-to-End-Tests mit Servicetrace erstellt</li>
+                  <li>Dashboards in Splunk erstellt</li>
                 </ul>
                 <section class="print-section">
                   <div class="mt-3 flex flex-wrap gap-2">
